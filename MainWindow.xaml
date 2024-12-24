@@ -1,0 +1,32 @@
+﻿<Window x:Class="UchebnayaPraktika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UchebnayaPraktika"
+        mc:Ignorable="d"
+        Title="Учебная практика" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="5">
+            <TextBlock Text="Последовательность чисел"
+                       TextWrapping="Wrap"/>
+            <TextBox x:Name="tbValues"
+                     TextWrapping="Wrap"
+                     TextChanged="tbValues_TextChanged"/>
+            <TextBlock x:Name="txtAreValuesPrime"
+                       TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <Grid x:Name="gridDashedLineValues"
+              Grid.Column="1" Margin="0,10"/>
+
+        <Canvas x:Name="canvas"
+                Grid.Column="2" Margin="0,10"/>
+    </Grid>
+</Window>
